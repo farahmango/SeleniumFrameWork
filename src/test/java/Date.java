@@ -18,14 +18,14 @@ public class Date {
     @Test
     public void dateFormatter() {
       LocalDate date = DateUtils.getTheCurrentDate();
-       String dateFormat =  DateUtils.dateFormatter(date,"dd MMMM YYY");
+       String dateFormat =  DateUtils.dateFormatter(date,"dd-MMM-YYY");
        System.out.println(dateFormat);
     }
 
     @Test
     public void timeFormatter() {
         LocalTime time = DateUtils.getTheCurrentTime();
-        String dateFormat =  DateUtils.timeFormatter(time,"hh:mm a");
+        String dateFormat =  DateUtils.timeFormatter(time,"hh:mm:a");
         System.out.println(dateFormat);
     }
 

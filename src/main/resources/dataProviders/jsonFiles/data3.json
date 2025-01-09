@@ -1,12 +1,12 @@
 {
-  "id": 1,
+  "id": "1",
   "name": "John Doe",
   "email": "john.doe@example.com",
-  "age": 32,
+  "age": "32",
   "street": "155 Middleville Road",
   "city": "New York",
   "state": "New York",
-  "zipCode":10045,
+  "zipCode":"10045",
   "state2": "farah York",
-  "zipCode2":100
+  "zipCode2":"100"
   }

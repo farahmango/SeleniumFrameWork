@@ -9,43 +9,67 @@ import java.util.Map;
 public class Json {
 
     @Test
-    public void readObjFromJson() {
-        Object data = JsonUtils.readObjFromJson(FilesPath.jsonFilePath + "data.json", "age");
+    public void readValueFromJsonObj() {
+        Object data = JsonUtils.readValueFromJsonObj(FilesPath.jsonFilePath + "data.json", "age");
         System.out.println(data.toString());
     }
 
     @Test
-    public void readArrayFromJson() {
-        JsonArray values = JsonUtils.readArrayFromJson(FilesPath.jsonFilePath + "data.json", "paymentMethods");
+    public void readArrayOfStringFromJsonObj() {
+        ArrayList<String> values = JsonUtils.readArrayOfStringFromJsonObj(FilesPath.jsonFilePath + "data.json", "paymentMethods");
         values.forEach(System.out::println);
     }
 
     @Test
-    public void readMapOfObjJson() {
-        Map<String, Object> values = JsonUtils.readMapOfObjJson(FilesPath.jsonFilePath + "data.json", "address");
-        values.forEach((key, value) -> System.out.println(key + ": " + value));
+    public void readObjFromJsonObj() {
+        Map<String, String> values = JsonUtils.readObjFromJsonObj(FilesPath.jsonFilePath + "data.json", "address");
+        System.out.println(values.get("city"));
+        values.forEach((key, value) ->
+                System.out.println(key + ": " + value));
+    }
+
+    @Test
+    public void readArrayOfObjFromJsonObj() {
+        System.out.println("**********************");
+        JsonArray arrayOfObj = JsonUtils.readArrayOfObjFromJsonObj(FilesPath.jsonFilePath + "data4.json", "data");
+            arrayOfObj.forEach(entry-> {
+                Map<String, Object> obj = (Map<String, Object>) entry;
+                obj.forEach((key, value) ->
+                        System.out.println(key + ": " + value));
+                JsonArray arrayOfObj2 = (JsonArray) obj.get("categories");
+                arrayOfObj2.forEach(entry2 -> {
+                    Map<String, String> obj2 = (Map<String, String>) entry2;
+                    obj2.forEach((key, value) ->
+                            System.out.println(key + ": " + value));
+                });
+            });
     }
 
     @Test
     public void readArrayOfObj() {
-        JsonUtils.readArrayOfObj(FilesPath.jsonFilePath + "data.json", "projects");
+        System.out.println("**********************");
+        JsonArray arrayOfObj = JsonUtils.readArrayOfObjFromJsonObj(FilesPath.jsonFilePath + "data.json", "projects");
+        arrayOfObj.forEach(entry-> {
+            Map<String, String> obj = (Map<String, String>) entry;
+            obj.forEach((key, value) ->
+                    System.out.println(key + ": " + value));
+        });
     }
-
     @Test
-    public void test() {
+    public void readJsonArray() {
         Object parser = JsonUtils.parseJson(FilesPath.jsonFilePath + "data2.json");
         ArrayList<String> arr;
         arr = (ArrayList<String>) parser;
-        for (String island : arr) {
-            System.out.println(island);
-        }
+        arr.forEach(
+                System.out::println
+        );
     }
 
     @Test
-    public void test2() {
-        Object parser = JsonUtils.parseJson(FilesPath.jsonFilePath + "data3.json");
-        Map<String, Object> obj;
-        obj = (Map<String, Object>) parser;
+    public void readJsonObj() {
+        Object parser = JsonUtils.deserializeJson(FilesPath.jsonFilePath + "data3.json");
+        Map<String, String> obj;
+        obj = (Map<String, String>) parser;
         obj.forEach((key, value) -> {
             System.out.println(key + ": " + value);
         });

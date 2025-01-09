@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 import org.apache.poi.ss.usermodel.*;
@@ -16,12 +17,12 @@ public class ExcelUtils {
     public static XSSFWorkbook wb;
     public static FileInputStream file;
 
-    /*
-     * open sheet xlsx format
+    /**
+     * <open sheet xlsx format>
      * @param filePath       file path to read
      * @param sheetIndex      sheet name to interrogate
      * @return XSSFSheet
-     */
+     **/
     public static XSSFSheet openSheetInTheWorkBook(String filePath, int sheetIndex) {
         try {
             file = new FileInputStream(filePath);
@@ -37,13 +38,13 @@ public class ExcelUtils {
         return sheet;
     }
 
-    /*
-     * open sheet xlsx format
+    /**
+     * <open sheet xlsx format>
      * @param filePath       file path to read
      * @param sheetIndex      sheet name to interrogate
      * @param rowNumber      number of row
      * @return array list of string
-     */
+     **/
     public static ArrayList<String> readSpecificRow(String filePath, int sheetIndex, int rowNumber) {
         XSSFSheet sheet = openSheetInTheWorkBook(filePath, sheetIndex);
         XSSFRow row = sheet.getRow(rowNumber);
@@ -77,14 +78,14 @@ public class ExcelUtils {
         return array;
     }
 
-    /*
-     * open sheet xlsx format
+    /**
+     * <open sheet xlsx format>
      * @param filePath       file path to read
      * @param sheetIndex      sheet name to interrogate
      * @param rowNumber      number of row
      * @param cellNumber     number of cell
      * @return cell value
-     */
+     **/
     public static String readSpecificCell(String filePath, int sheetIndex, int rowNumber, int cellNumber) {
         XSSFSheet sheet = openSheetInTheWorkBook(filePath, sheetIndex);
         XSSFRow row = sheet.getRow(rowNumber);
@@ -114,12 +115,12 @@ public class ExcelUtils {
     }
 
 
-    /*
-     * open sheet xlsx format
+    /**
+     * <open sheet xlsx format>
      * @param filePath       file path to read
      * @param sheetIndex      sheet name to interrogate
      * @return array list of string
-     */
+     **/
     public static ArrayList<String> readAllDataSheet(String filePath, int sheetIndex) {
         XSSFSheet sheet = openSheetInTheWorkBook(filePath, sheetIndex);
         ArrayList<String> array = new ArrayList<>();
@@ -133,9 +134,8 @@ public class ExcelUtils {
                         if (cell.getCellType() == CellType.NUMERIC) {
                             // If cell type is numeric, we need to check if data is of Date type
                             if (DateUtil.isCellDateFormatted(cell)) {
-                                // Need to use DataFormatter to get data in given style otherwise it will come as time stamp
-                                DataFormatter df = new DataFormatter();
-                                array.add(df.formatCellValue(cell));
+//                                 Need to use DataFormatter to get data in given style otherwise it will come as time stamp
+                                array.add(String.valueOf(cell));
                             } else {
                                 array.add((String.valueOf(cell.getNumericCellValue())));
                             }
@@ -151,14 +151,14 @@ public class ExcelUtils {
         return array;
     }
 
-    /*
-     * open sheet xlsx format
+    /**
+     * <open sheet xlsx format>
      * @param filePath            file path to read
      * @param sheetIndex           sheet name to interrogate
      * @param rowNumber          number of the existing row
      * @param newCellNumber      number of the new cell to add
      * @param value              the new value of the cell
-     */
+     **/
 
     public static void writeAnewCellInExistingRow(String filePath, int sheetIndex, int rowNumber, int newCellNumber, String value) {
         XSSFSheet sheet = openSheetInTheWorkBook(filePath, sheetIndex);
@@ -167,13 +167,13 @@ public class ExcelUtils {
         addNewCell.setCellValue(value);
     }
 
-    /*
-     * open sheet xlsx format
+    /**
+     * <open sheet xlsx format>
      * @param filePath       file path to read
      * @param sheetIndex      sheet name to interrogate
      * @param rowNumber      number of the new  row
      * @return new row
-     */
+     **/
     public static XSSFRow createNewRow(String filePath, int sheetIndex, int rowNumber) {
         XSSFSheet sheet = openSheetInTheWorkBook(filePath, sheetIndex);
         XSSFRow row = sheet.createRow(rowNumber);
@@ -181,22 +181,22 @@ public class ExcelUtils {
 
     }
 
-    /*
-     * open sheet xlsx format
+    /**
+     * <open sheet xlsx format>
      * @param newRow            you have to call this method createNewRow() to return the new row and put it as param
      * @param newCellNumber     the number of the new cell
      * @param value             the value of the new cell
-     */
+     **/
 
     public static void writeAnewCellInNewRow(XSSFRow newRow, int newCellNumber, String value) {
         XSSFCell addNewCell = newRow.createCell(newCellNumber);
         addNewCell.setCellValue(value);
     }
 
-    /*
-     * close sheet xlsx format
+    /**
+     * <close sheet xlsx format>
      * @param filePath     file path to close
-     */
+     **/
     public static void closeTheWB(String filePath) {
         // Save the changes
         FileOutputStream outputStream = null;
