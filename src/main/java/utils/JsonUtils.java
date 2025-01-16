@@ -11,6 +11,7 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
 public class JsonUtils {
@@ -87,7 +88,7 @@ public class JsonUtils {
      */
     public static Map<String, String> readObjFromJsonObj(String filePath, String key1) {
         JsonObject parser = deserializeJson(filePath);
-        Map<String, String> values = (Map<String, String>) parser.get(key1);
+        Map<String, String> values = (HashMap<String, String>) parser.get(key1);
         return (values);
     }
 

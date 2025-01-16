@@ -1,21 +1,24 @@
 package utils;
 
+import helpers.ActionHelper;
 import interfaces.FilesPath;
+import org.apache.commons.codec.binary.Base64;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import pages.Base;
 
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Properties;
 
-public class FileUtils {
+public class FileUtils extends Base {
 
     /**
      * <write in a text file>
@@ -87,8 +90,8 @@ public class FileUtils {
      * @param filePath          the file that you want to download
      **/
     public static void uploadLocalFile(By button, String filePath) {
-//        ActionsHelper.actionClickStepClick("click on upload", button);
-//        ActionsHelper.driverWait(2000);
+        ActionHelper.clickAction(button);
+        ActionHelper.driverWait(2000);
         StringSelection strSelection = new StringSelection(filePath);
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
         clipboard.setContents(strSelection, null);
@@ -140,11 +143,27 @@ public class FileUtils {
      * @param destinationFile           destination File to paste
      ***/
     public static void copyFile(File sourceFile, String destinationFile) {
-
         try {
             org.apache.commons.io.FileUtils.copyFile(sourceFile, new File(destinationFile));
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public static String encodeFileToBase64Binary()  {
+        File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+        FileInputStream fileInputStreamReader = null;
+        try {
+            fileInputStreamReader = new FileInputStream(file);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        byte[] bytes = new byte[(int) file.length()];
+        try {
+            fileInputStreamReader.read(bytes);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return new String(Base64.encodeBase64(bytes), StandardCharsets.UTF_8);
     }
 }

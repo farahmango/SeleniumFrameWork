@@ -6,7 +6,9 @@ public interface FilesPath {
     String  excelFilePath = userDir + "//src//main//resources//dataProviders//excelFiles//";
     String  textFilePath = userDir + "//src//main//resources//dataProviders//textFiles//";
     String  jsonFilePath = userDir + "//src//main//resources//dataProviders//jsonFiles//";
-    String  propertiesFilePath = userDir + "//src//main//resources//dataProviders//propertiesFiles//";
+    String  resourcesFilePath = userDir + "//src//main//resources//";
+    String  reportsFilePath = userDir + "//src//main//resources//reports//";
+
     String  screenShotPath = userDir + "//src//main//resources//screenShots//";
 
 }

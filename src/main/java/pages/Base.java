@@ -26,7 +26,7 @@ public class Base {
         DriverType browser = getTheDriverType();
         boolean isHeadLess = isHeadLess();
         driver = initiateWebDriver(browser, isHeadLess);
-        String url = FileUtils.readPropertiesFile(FilesPath.propertiesFilePath + "config.properties", "BaseURL");
+        String url = FileUtils.readPropertiesFile(FilesPath.resourcesFilePath + "config.properties", "BaseURL");
         driver.get(url);
     }
 
@@ -101,12 +101,12 @@ public class Base {
     }
 
     public Boolean isHeadLess() {
-        String browserName = FileUtils.readPropertiesFile(FilesPath.propertiesFilePath + "config.properties", "headless");
+        String browserName = FileUtils.readPropertiesFile(FilesPath.resourcesFilePath + "config.properties", "headless");
         return Boolean.valueOf(browserName);
     }
 
     public DriverType getTheDriverType() {
-        String browserName = FileUtils.readPropertiesFile(FilesPath.propertiesFilePath + "config.properties", "browser");
+        String browserName = FileUtils.readPropertiesFile(FilesPath.resourcesFilePath + "config.properties", "browser");
         System.out.println(browserName);
         if (browserName.equalsIgnoreCase("chrome"))
             return DriverType.CHROME;
