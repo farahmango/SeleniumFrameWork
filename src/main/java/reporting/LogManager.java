@@ -26,7 +26,6 @@ public class LogManager implements ITestListener {
         logger.info(ConsoleColors.BLUE + message + ConsoleColors.RESET);
         testReport.get().log(Status.INFO,message,MediaEntityBuilder.createScreenCaptureFromBase64String(FileUtils.encodeFileToBase64Binary()).build());
 
-
     }
     public static  void ERROR(String message) {
         logger.error(ConsoleColors.RED + message + ConsoleColors.RESET);

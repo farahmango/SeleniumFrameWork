@@ -34,7 +34,7 @@ public class ExplicitWait extends Base {
 
     public static void elementToBeClickable(By webElement) {
         WebElement WB = ActionHelper.findElement(webElement);
-        wait.until(ExpectedConditions.elementToBeClickable(webElement));
+        wait.until(ExpectedConditions.elementToBeClickable(WB));
     }
 
     public static void textToBePresentInElement(By webElement, String text) {

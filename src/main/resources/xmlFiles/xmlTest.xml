@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Google">
-
+<suite name="Almosafer">
     <listeners>
         <listener class-name="reporting.LogManager"/>
     </listeners>
-    <test name="testing google">
+    <test name="Almosafer" parallel="classes">
         <classes>
-            <class name="Base"></class>
+            <class name="HomeTest"></class>
             <class name="Json"></class>
+            <class name="Date"></class>
+            <class name="File"></class>
+            <class name="Excel"></class>
         </classes>
     </test>
 </suite>

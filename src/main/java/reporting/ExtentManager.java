@@ -16,8 +16,7 @@ public class ExtentManager {
     public static ExtentReports createInstance() {
         String dateFormatter = DateUtils.dateFormatter(DateUtils.getTheCurrentDate(), "DD-MMM-YYYY");
         String timeFormatter = DateUtils.timeFormatter(DateUtils.getTheCurrentTime(), "hh-mm-ss-a");
-
-        ExtentSparkReporter htmlReporter = new ExtentSparkReporter(FilesPath.reportsFilePath +"ExtentReport-" + dateFormatter + " at " + timeFormatter +".html" );
+        ExtentSparkReporter htmlReporter = new ExtentSparkReporter(FilesPath.reportsFilePath + "ExtentReport-" + dateFormatter + " at " + timeFormatter + ".html");
 
         htmlReporter.config().setTheme(Theme.STANDARD);
         htmlReporter.config().setDocumentTitle("Selenium Framework");
@@ -26,16 +25,15 @@ public class ExtentManager {
 
         extent = new ExtentReports();
         extent.attachReporter(htmlReporter);
-        extent.setSystemInfo("Operating System",System.getProperty("os.name"));
-        extent.setSystemInfo("Operating System Version",System.getProperty("os.version"));
-        extent.setSystemInfo("Run User",System.getProperty("user.name"));
-        extent.setSystemInfo("Java runtime",System.getProperty("java.runtime.version"));
+        extent.setSystemInfo("Operating System", System.getProperty("os.name"));
+        extent.setSystemInfo("Operating System Version", System.getProperty("os.version"));
+        extent.setSystemInfo("Run User", System.getProperty("user.name"));
+        extent.setSystemInfo("Java runtime", System.getProperty("java.runtime.version"));
 
         extent.setAnalysisStrategy(AnalysisStrategy.TEST);
 
         return extent;
     }
-
 
 
 }

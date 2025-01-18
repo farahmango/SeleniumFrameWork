@@ -65,12 +65,14 @@ public class ActionHelper extends Base {
         logManager.INFO("The user scroll To Page Top");
     }
 
-    public static void getTheCurrentUrl() {
-        driver.getCurrentUrl();
+    public static String getTheCurrentUrl() {
+        logManager.INFO("get the current URL: " +driver.getCurrentUrl());
+        return  driver.getCurrentUrl();
     }
 
-    public static void getTheTitleOfThePage() {
-        driver.getTitle();
+    public static String getTheTitleOfThePage() {
+        logManager.INFO("get the page title: " +driver.getTitle());
+       return driver.getTitle();
     }
 
     public static void clickAction(By webElement) {
@@ -99,8 +101,6 @@ public class ActionHelper extends Base {
     }
 
     public static void takeScreenShot() {
-//        By headerDiv = By.xpath("//img[@alt='Google']");
-//        makeBorder(headerDiv);
         File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         String dateFormatter = DateUtils.dateFormatter(DateUtils.getTheCurrentDate(), "dd-MMM-YY");
         String timeFormatter = DateUtils.timeFormatter(DateUtils.getTheCurrentTime(), "hh-mm-ss-a");

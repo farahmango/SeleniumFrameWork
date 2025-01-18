@@ -8,7 +8,6 @@ public interface FilesPath {
     String  jsonFilePath = userDir + "//src//main//resources//dataProviders//jsonFiles//";
     String  resourcesFilePath = userDir + "//src//main//resources//";
     String  reportsFilePath = userDir + "//src//main//resources//reports//";
-
     String  screenShotPath = userDir + "//src//main//resources//screenShots//";
 
 }
