@@ -150,6 +150,10 @@ public class FileUtils extends Base {
         }
     }
 
+    /***
+     * <encode file to base 64 binary>
+     * return string value
+     ***/
     public static String encodeFileToBase64Binary()  {
         File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         FileInputStream fileInputStreamReader = null;

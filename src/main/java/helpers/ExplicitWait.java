@@ -48,8 +48,7 @@ public class ExplicitWait extends Base {
     }
 
     public static void waitForPageThatHasGivenTitle(String title) {
-//        wait.until(ExpectedConditions.titleIs(title));
-        fluentWait.until(ExpectedConditions.titleIs(title));
+        wait.until(ExpectedConditions.titleIs(title));
     }
 
     public static void elementToBeSelected(By webElement) {
@@ -67,5 +66,8 @@ public class ExplicitWait extends Base {
         wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(WB));
     }
 
+    public static void waitUrlToBe(String url) {
+        wait.until(ExpectedConditions.urlToBe(url));
+    }
 
 }
