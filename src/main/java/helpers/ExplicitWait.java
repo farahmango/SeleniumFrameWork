@@ -16,7 +16,7 @@ import java.util.NoSuchElementException;
 
 public class ExplicitWait extends Base {
 
-    static WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    static WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     static Wait<WebDriver> fluentWait = new FluentWait<>(driver)
             .withTimeout(Duration.ofSeconds(5))
             .pollingEvery(Duration.ofSeconds(5))
@@ -29,7 +29,6 @@ public class ExplicitWait extends Base {
 
     public static void alertIsPresent() {
         wait.until(ExpectedConditions.alertIsPresent());
-        fluentWait.until(ExpectedConditions.alertIsPresent());
     }
 
     public static void elementToBeClickable(By webElement) {

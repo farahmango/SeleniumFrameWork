@@ -7,6 +7,7 @@ import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
+import helpers.ActionHelper;
 import interfaces.ConsoleColors;
 import org.apache.log4j.Logger;
 import org.testng.ITestContext;
@@ -32,43 +33,41 @@ public class LogManager implements ITestListener {
         testReport.get().log(Status.FAIL,message,MediaEntityBuilder.createScreenCaptureFromBase64String(FileUtils.encodeFileToBase64Binary()).build());
 
     }
-
+    @Override
     public void onTestStart(ITestResult result) {
         System.out.println("***** Test Case " + result.getMethod().getMethodName() + " Start *****");
         ExtentTest test = extent.createTest("Class: "+result.getTestClass().getName()+" @ TestCase: "+result.getMethod().getMethodName());
         testReport.set(test);
-
         testReport.set(testReport.get().assignCategory(result.getTestClass().getName()+"  Class"));
         testReport.set(testReport.get().createNode(result.getMethod().getMethodName()));
-
-
     }
-
+    @Override
     public void onTestSuccess(ITestResult result) {
         System.out.println(ConsoleColors.GREEN + "***** Test Case " + result.getMethod().getMethodName() + " Succeed *****" +ConsoleColors.RESET );
         String logText="Test case "+result.getMethod().getMethodName() +" Passed";
         Markup markup = MarkupHelper.createLabel(logText, ExtentColor.GREEN);
         testReport.get().pass(markup);
     }
-
+    @Override
     public void onTestFailure(ITestResult result) {
         System.out.println(ConsoleColors.RED +"***** Test Case " + result.getMethod().getMethodName() + " Failed *****"+ConsoleColors.RESET);
         String logText="Test case "+result.getMethod().getMethodName() +" Failed" ;
         Markup markup = MarkupHelper.createLabel(logText, ExtentColor.RED);
         testReport.get().fail(markup);
+        ActionHelper.takeScreenShot();
     }
-
+    @Override
     public void onTestSkipped(ITestResult result) {
         System.out.println("***** Test Case " + result.getMethod().getMethodName() + " Skipped *****");
         String logText=result.getMethod().getMethodName() ;
         Markup markup = MarkupHelper.createLabel(logText, ExtentColor.ORANGE);
         testReport.get().skip(markup);
     }
-
+    @Override
     public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
         System.out.println("***** Test Case " + result.getMethod().getMethodName() + " Failed ButWithin Success Percentage *****");
     }
-
+    @Override
     public void onTestFailedWithTimeout(ITestResult result) {
         this.onTestFailure(result);
         System.out.println("***** Test Case " + result.getMethod().getMethodName() + " Failed With Timeout *****");

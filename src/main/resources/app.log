@@ -1,24 +1,32 @@
-2025-01-18 14:36:59 -- INFO - [0;34mget the current URL: https://global.almosafer.com/en[0m
-2025-01-18 14:37:02 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
-2025-01-18 14:37:03 -- INFO - [0;34mThe user click on [By.xpath: //a[@class='sc-gkFcWv jJNggu']][0m
-2025-01-18 14:37:03 -- INFO - [0;34mget the page title: المسافر: رحلات، فنادق، أنشطة ممتعة و تذاكر طيران[0m
-2025-01-18 14:38:53 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
-2025-01-18 14:38:54 -- INFO - [0;34mget the current URL: https://global.almosafer.com/en[0m
-2025-01-18 14:38:57 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
-2025-01-18 14:38:57 -- INFO - [0;34mThe user click on [By.xpath: //a[@class='sc-gkFcWv jJNggu']][0m
-2025-01-18 14:38:58 -- INFO - [0;34mget the page title: المسافر: رحلات، فنادق، أنشطة ممتعة و تذاكر طيران[0m
-2025-01-20 11:27:49 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
-2025-01-20 11:27:49 -- INFO - [0;34mget the current URL: https://global.almosafer.com/en[0m
-2025-01-20 11:27:53 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
-2025-01-20 11:27:55 -- INFO - [0;34mThe user click on [By.xpath: //a[@class='sc-gkFcWv jJNggu']][0m
-2025-01-20 11:27:55 -- INFO - [0;34mget the page title: المسافر: رحلات، فنادق، أنشطة ممتعة و تذاكر طيران[0m
-2025-01-20 11:33:47 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
-2025-01-20 11:33:47 -- INFO - [0;34mget the current URL: https://global.almosafer.com/en[0m
-2025-01-20 11:33:51 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
-2025-01-20 11:33:52 -- INFO - [0;34mThe user click on [By.xpath: //a[@class='sc-gkFcWv jJNggu']][0m
-2025-01-20 11:33:52 -- INFO - [0;34mget the page title: المسافر: رحلات، فنادق، أنشطة ممتعة و تذاكر طيران[0m
-2025-01-20 11:34:38 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
-2025-01-20 11:34:38 -- INFO - [0;34mget the current URL: https://global.almosafer.com/en[0m
-2025-01-20 11:34:42 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
-2025-01-20 11:34:42 -- INFO - [0;34mThe user click on [By.xpath: //a[@class='sc-gkFcWv jJNggu']][0m
-2025-01-20 11:34:43 -- INFO - [0;34mget the page title: المسافر: رحلات، فنادق، أنشطة ممتعة و تذاكر طيران[0m
+2025-01-21 11:22:40 -- INFO - [0;34mThe user click on [By.xpath: //a[@class='sc-gkFcWv jJNggu']][0m
+2025-01-21 11:22:40 -- INFO - [0;34mget the page title: المسافر: رحلات، فنادق، أنشطة ممتعة و تذاكر طيران[0m
+2025-01-21 11:32:26 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
+2025-01-21 11:32:26 -- INFO - [0;34mget the current URL: https://global.almosafer.com/en[0m
+2025-01-21 11:32:40 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
+2025-01-21 11:32:42 -- INFO - [0;34mThe user click on [By.xpath: //a[@class='sc-gkFcWv jJNggu']][0m
+2025-01-21 11:32:42 -- INFO - [0;34mget the page title: المسافر: رحلات، فنادق، أنشطة ممتعة و تذاكر طيران[0m
+2025-01-21 11:37:27 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
+2025-01-21 11:37:27 -- INFO - [0;34mget the current URL: https://global.almosafer.com/en[0m
+2025-01-21 11:37:39 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
+2025-01-21 11:37:41 -- INFO - [0;34mThe user click on [By.xpath: //a[@class='sc-gkFcWv jJNggu']][0m
+2025-01-21 11:37:41 -- INFO - [0;34mget the page title: المسافر: رحلات، فنادق، أنشطة ممتعة و تذاكر طيران[0m
+2025-01-21 11:39:36 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
+2025-01-21 11:39:36 -- INFO - [0;34mget the current URL: https://global.almosafer.com/en[0m
+2025-01-21 11:39:42 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
+2025-01-21 11:39:44 -- INFO - [0;34mThe user click on [By.xpath: //a[@class='sc-gkFcWv jJNggu']][0m
+2025-01-21 11:39:44 -- INFO - [0;34mget the page title: المسافر: رحلات، فنادق، أنشطة ممتعة و تذاكر طيران[0m
+2025-01-21 11:41:59 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
+2025-01-21 11:41:59 -- INFO - [0;34mget the current URL: https://global.almosafer.com/en[0m
+2025-01-21 11:42:12 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
+2025-01-21 11:42:14 -- INFO - [0;34mThe user click on [By.xpath: //a[@class='sc-gkFcWv jJNggu']][0m
+2025-01-21 11:42:14 -- INFO - [0;34mget the page title: المسافر: رحلات، فنادق، أنشطة ممتعة و تذاكر طيران[0m
+2025-01-21 12:02:49 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
+2025-01-21 12:02:50 -- INFO - [0;34mget the current URL: https://global.almosafer.com/en[0m
+2025-01-21 12:03:01 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
+2025-01-21 12:03:03 -- INFO - [0;34mThe user click on [By.xpath: //a[@class='sc-gkFcWv jJNggu']][0m
+2025-01-21 12:03:03 -- INFO - [0;34mget the page title: المسافر: رحلات، فنادق، أنشطة ممتعة و تذاكر طيران[0m
+2025-01-21 12:04:39 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
+2025-01-21 12:04:40 -- INFO - [0;34mget the current URL: https://global.almosafer.com/en[0m
+2025-01-21 12:04:45 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
+2025-01-21 12:04:47 -- INFO - [0;34mThe user click on [By.xpath: //a[@class='sc-gkFcWv jJNggu']][0m
+2025-01-21 12:04:47 -- INFO - [0;34mget the page title: المسافر: رحلات، فنادق، أنشطة ممتعة و تذاكر طيران[0m

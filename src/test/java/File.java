@@ -15,4 +15,9 @@ public class File {
        String data =  FileUtils.readFromFile(FilesPath.textFilePath+ "Data.text");
        System.out.println(data);
     }
+    @Test
+    public void isFileDownloaded() {
+       boolean data =  FileUtils.isFileDownloaded("Flight Booking Websites.pdf");
+       System.out.println(data);
+    }
 }

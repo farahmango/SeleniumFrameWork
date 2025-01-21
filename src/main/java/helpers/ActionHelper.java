@@ -2,14 +2,20 @@ package helpers;
 
 import interfaces.FilesPath;
 import org.openqa.selenium.*;
+
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import pages.Base;
 import reporting.LogManager;
+import ru.yandex.qatools.ashot.AShot;
+import ru.yandex.qatools.ashot.Screenshot;
+import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 import utils.DateUtils;
 import utils.FileUtils;
-
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 public class ActionHelper extends Base {
@@ -101,10 +107,14 @@ public class ActionHelper extends Base {
     }
 
     public static void takeScreenShot() {
-        File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         String dateFormatter = DateUtils.dateFormatter(DateUtils.getTheCurrentDate(), "dd-MMM-YY");
         String timeFormatter = DateUtils.timeFormatter(DateUtils.getTheCurrentTime(), "hh-mm-ss-a");
-        FileUtils.copyFile(file, FilesPath.screenShotPath + dateFormatter + " at " + timeFormatter + ".jpeg");
+        Screenshot s = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000)).takeScreenshot(driver);
+        try {
+            ImageIO.write(s.getImage(), "PNG", new File(FilesPath.screenShotPath + dateFormatter + " at " + timeFormatter + ".png"));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static void driverWait(long millSecond) {
@@ -122,7 +132,7 @@ public class ActionHelper extends Base {
     public static void makeBorder(By webElement) {
         WebElement wb = findElement(webElement);
         js.executeScript("arguments[0].style.border = '3px solid red'", wb);
-        logManager.INFO("Make red border on this element " + webElement);
+        logManager.INFO("Make a red border on this element " + webElement);
 
     }
 }
