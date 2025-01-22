@@ -54,7 +54,7 @@ public class LogManager implements ITestListener {
         String logText="Test case "+result.getMethod().getMethodName() +" Failed" ;
         Markup markup = MarkupHelper.createLabel(logText, ExtentColor.RED);
         testReport.get().fail(markup);
-        ActionHelper.takeScreenShot();
+//        ActionHelper.takeScreenShot();
     }
     @Override
     public void onTestSkipped(ITestResult result) {

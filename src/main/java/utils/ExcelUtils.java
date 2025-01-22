@@ -19,8 +19,9 @@ public class ExcelUtils {
 
     /**
      * <open sheet xlsx format>
-     * @param filePath       file path to read
-     * @param sheetIndex      sheet name to interrogate
+     *
+     * @param filePath   file path to read
+     * @param sheetIndex sheet index to open
      * @return XSSFSheet
      **/
     public static XSSFSheet openSheetInTheWorkBook(String filePath, int sheetIndex) {
@@ -39,10 +40,11 @@ public class ExcelUtils {
     }
 
     /**
-     * <open sheet xlsx format>
-     * @param filePath       file path to read
-     * @param sheetIndex      sheet name to interrogate
-     * @param rowNumber      number of row
+     * <read specific row>
+     *
+     * @param filePath   file path to read
+     * @param sheetIndex sheet index to open
+     * @param rowNumber  number of row
      * @return array list of string
      **/
     public static ArrayList<String> readSpecificRow(String filePath, int sheetIndex, int rowNumber) {
@@ -79,11 +81,12 @@ public class ExcelUtils {
     }
 
     /**
-     * <open sheet xlsx format>
-     * @param filePath       file path to read
-     * @param sheetIndex      sheet name to interrogate
-     * @param rowNumber      number of row
-     * @param cellNumber     number of cell
+     * <read specific cell>
+     *
+     * @param filePath   file path to read
+     * @param sheetIndex sheet index to open
+     * @param rowNumber  number of row
+     * @param cellNumber number of cell
      * @return cell value
      **/
     public static String readSpecificCell(String filePath, int sheetIndex, int rowNumber, int cellNumber) {
@@ -116,9 +119,10 @@ public class ExcelUtils {
 
 
     /**
-     * <open sheet xlsx format>
-     * @param filePath       file path to read
-     * @param sheetIndex      sheet name to interrogate
+     * <read all data sheet>
+     *
+     * @param filePath   file path to read
+     * @param sheetIndex sheet index to open
      * @return array list of string
      **/
     public static ArrayList<String> readAllDataSheet(String filePath, int sheetIndex) {
@@ -134,7 +138,7 @@ public class ExcelUtils {
                         if (cell.getCellType() == CellType.NUMERIC) {
                             // If cell type is numeric, we need to check if data is of Date type
                             if (DateUtil.isCellDateFormatted(cell)) {
-//                                 Need to use DataFormatter to get data in given style otherwise it will come as time stamp
+                                // Need to use DataFormatter to get data in given style otherwise it will come as time stamp
                                 array.add(String.valueOf(cell));
                             } else {
                                 array.add((String.valueOf(cell.getNumericCellValue())));
@@ -153,11 +157,12 @@ public class ExcelUtils {
 
     /**
      * <open sheet xlsx format>
-     * @param filePath            file path to read
-     * @param sheetIndex           sheet name to interrogate
-     * @param rowNumber          number of the existing row
-     * @param newCellNumber      number of the new cell to add
-     * @param value              the new value of the cell
+     *
+     * @param filePath      file path to read
+     * @param sheetIndex    sheet index to open
+     * @param rowNumber     number of the existing row
+     * @param newCellNumber number of the new cell to add
+     * @param value         the new value of the cell
      **/
 
     public static void writeAnewCellInExistingRow(String filePath, int sheetIndex, int rowNumber, int newCellNumber, String value) {
@@ -168,10 +173,11 @@ public class ExcelUtils {
     }
 
     /**
-     * <open sheet xlsx format>
-     * @param filePath       file path to read
-     * @param sheetIndex      sheet name to interrogate
-     * @param rowNumber      number of the new  row
+     * <create a new row>
+     *
+     * @param filePath   file path to read
+     * @param sheetIndex sheet index to open
+     * @param rowNumber  number of the new  row
      * @return new row
      **/
     public static XSSFRow createNewRow(String filePath, int sheetIndex, int rowNumber) {
@@ -182,10 +188,11 @@ public class ExcelUtils {
     }
 
     /**
-     * <open sheet xlsx format>
-     * @param newRow            you have to call this method createNewRow() to return the new row and put it as param
-     * @param newCellNumber     the number of the new cell
-     * @param value             the value of the new cell
+     * <write a new cell in a new row>
+     *
+     * @param newRow        you have to call this method createNewRow() to return the new row and put it as param
+     * @param newCellNumber the number of the new cell
+     * @param value         the value of the new cell
      **/
 
     public static void writeAnewCellInNewRow(XSSFRow newRow, int newCellNumber, String value) {
@@ -195,7 +202,8 @@ public class ExcelUtils {
 
     /**
      * <close sheet xlsx format>
-     * @param filePath     file path to close
+     *
+     * @param filePath file path to close
      **/
     public static void closeTheWB(String filePath) {
         // Save the changes

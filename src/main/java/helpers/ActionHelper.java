@@ -2,7 +2,6 @@ package helpers;
 
 import interfaces.FilesPath;
 import org.openqa.selenium.*;
-
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import pages.Base;
@@ -11,9 +10,7 @@ import ru.yandex.qatools.ashot.AShot;
 import ru.yandex.qatools.ashot.Screenshot;
 import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
 import utils.DateUtils;
-import utils.FileUtils;
 import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -127,6 +124,12 @@ public class ActionHelper extends Base {
 
     public static void implicitWait(long millSecond) {
         driver.manage().timeouts().implicitlyWait(millSecond, TimeUnit.SECONDS);
+    }
+    public static void pageLoadTimeout(long millSecond) {
+        driver.manage().timeouts().pageLoadTimeout(millSecond, TimeUnit.SECONDS);
+    }
+    public static void setScriptTimeout(long millSecond) {
+        driver.manage().timeouts().setScriptTimeout(millSecond, TimeUnit.SECONDS);
     }
 
     public static void makeBorder(By webElement) {

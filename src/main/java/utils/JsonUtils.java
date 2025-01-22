@@ -17,10 +17,12 @@ import java.util.Map;
 public class JsonUtils {
 
 
-    /** <return JsonObject to read jsonObject file>
-     * @param filePath       file path to read json
+    /**
+     * <return JsonObject to read jsonObject file>
+     *
+     * @param filePath file path to read json
      * @return JsonObject => HashMap <key,value>
-                             key of type string , value of type object
+     * key of type string , value of type object
      */
     public static JsonObject deserializeJson(String filePath) {
         try {
@@ -38,7 +40,8 @@ public class JsonUtils {
 
     /**
      * <return object to read jsonArray file>
-     * @param filePath       file path to read json
+     *
+     * @param filePath file path to read json
      * @return Object
      */
     public static Object parseJson(String filePath) {
@@ -58,8 +61,9 @@ public class JsonUtils {
 
     /**
      * <read a specific obj value from the json file>
-     * @param filePath       file path to read json
-     * @param key            parsing the key as string to read the value
+     *
+     * @param filePath file path to read json
+     * @param key      parsing the key as string to read the value
      * @return Object
      */
     public static Object readValueFromJsonObj(String filePath, String key) {
@@ -70,8 +74,9 @@ public class JsonUtils {
 
     /**
      * <read a specific array of string values from the json file>
-     * @param filePath       file path to read json
-     * @param key            parsing the key as string to read the array values
+     *
+     * @param filePath file path to read json
+     * @param key      parsing the key as string to read the array values
      * @return ArrayList<String>
      */
     public static ArrayList<String> readArrayOfStringFromJsonObj(String filePath, String key) {
@@ -82,9 +87,10 @@ public class JsonUtils {
 
     /**
      * <read a specific inner obj inside the jsonObj from the json file>
-     * @param filePath        file path to read json
-     * @param key1            parsing the key as string to read the inner the obj
-     * @return Map<String,String>
+     *
+     * @param filePath file path to read json
+     * @param key1     parsing the key as string to read the inner obj
+     * @return Map<String, String>
      */
     public static Map<String, String> readObjFromJsonObj(String filePath, String key1) {
         JsonObject parser = deserializeJson(filePath);
@@ -93,10 +99,12 @@ public class JsonUtils {
     }
 
 
-    /**  <read array of obj inside array of obj>
+    /**
+     * <read array of obj inside array of obj>
      * read a specific inner array of obj inside the jsonObj from the json file
-     * @param filePath        file path to read json
-     * @param arrayKey1            parsing the key as string to read the array of obj
+     *
+     * @param filePath  file path to read json
+     * @param arrayKey1 parsing the key as string to read the array of obj
      * @return JsonArray => ArrayList<Object>
      */
     public static JsonArray readArrayOfObjFromJsonObj(String filePath, String arrayKey1) {

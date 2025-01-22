@@ -1,6 +1,5 @@
 import com.github.cliftonlabs.json_simple.JsonArray;
 import interfaces.FilesPath;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import utils.JsonUtils;
 

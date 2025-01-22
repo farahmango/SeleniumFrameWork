@@ -8,6 +8,7 @@ public class DateUtils {
 
     /**
      * <get the today date>
+     *
      * @return the date with type local date
      **/
     public static LocalDate getTheCurrentDate() {
@@ -18,9 +19,10 @@ public class DateUtils {
 
     /**
      * <get a specific date>
-     * @param year      specific year
-     * @param month     specific month
-     * @param day       specific day
+     *
+     * @param year  specific year
+     * @param month specific month
+     * @param day   specific day
      * @return the date with type local date
      **/
     public static LocalDate getSpecificDate(int year, int month, int day) {
@@ -31,6 +33,7 @@ public class DateUtils {
 
     /**
      * <get the current time>
+     *
      * @return the time with type local time
      **/
     public static LocalTime getTheCurrentTime() {
@@ -41,9 +44,10 @@ public class DateUtils {
 
     /**
      * <get a specific time>
-     * @param hour      specific hour
-     * @param min       specific minute
-     * @param sec       specific second
+     *
+     * @param hour specific hour
+     * @param min  specific minute
+     * @param sec  specific second
      * @return the time with type local time
      **/
     public static LocalTime getTheSpecificTime(int hour, int min, int sec) {
@@ -54,8 +58,9 @@ public class DateUtils {
 
     /**
      * <make a specific format for the date>
-     * @param date          date with type local date
-     * @param format        date formatter with type string
+     *
+     * @param date   date with type local date
+     * @param format date formatter with type string
      * @return the date with the format in string
      **/
     public static String dateFormatter(LocalDate date, String format) {
@@ -68,8 +73,9 @@ public class DateUtils {
 
     /**
      * <make a specific format for the time>
-     * @param time          time with type local time
-     * @param format        time formatter with type string
+     *
+     * @param time   time with type local time
+     * @param format time formatter with type string
      * @return the time with the format in string
      **/
     public static String timeFormatter(LocalTime time, String format) {
@@ -81,6 +87,7 @@ public class DateUtils {
 
     /**
      * <check if the year is a leap year>
+     *
      * @return boolean true or false
      **/
     public static boolean isTheYearLeap() {

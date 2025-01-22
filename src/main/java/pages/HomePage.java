@@ -1,6 +1,7 @@
 package pages;
 
 import helpers.ActionHelper;
+import helpers.ExplicitWait;
 import org.openqa.selenium.By;
 import org.testng.asserts.SoftAssert;
 
@@ -14,7 +15,8 @@ public class HomePage extends Base {
         ActionHelper.clickAction(continueOnENButton);
         ActionHelper.implicitWait(5000);
         String url = ActionHelper.getTheCurrentUrl();
-        myAssert.assertTrue(url.contains("en"));
+        System.out.println(url.contains("/en"));
+        myAssert.assertTrue(url.contains("/en"));
         myAssert.assertAll();
     }
 
@@ -24,7 +26,10 @@ public class HomePage extends Base {
         ActionHelper.clickAction(arabicButton);
         ActionHelper.implicitWait(4000);
         String title = ActionHelper.getTheTitleOfThePage();
-        myAssert.assertTrue(title.equalsIgnoreCase("المسافر: رحلات، فنادق، أنشطة ممتعة و تذاكر طيران"));
+        ExplicitWait.waitForPageThatHasGivenTitle(title);
+        System.out.println(title.equalsIgnoreCase("المسافر: رحلات، فنادق، أنشطة ممتعة و تذاكر طيرا"));
+
+        myAssert.assertTrue(title.equalsIgnoreCase("المسافر: رحلات، فنادق، أنشطة ممتعة و تذاكر طيرا"));
         myAssert.assertAll();
     }
 }

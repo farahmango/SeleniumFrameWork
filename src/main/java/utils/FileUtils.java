@@ -22,8 +22,9 @@ public class FileUtils extends Base {
 
     /**
      * <write in a text file>
-     * @param filePath       file path to write in
-     * @param data           to write data
+     *
+     * @param filePath file path to write in
+     * @param data     to write data
      **/
     public static void writeIntoFile(String filePath, String data) {
         try {
@@ -37,8 +38,9 @@ public class FileUtils extends Base {
 
     /**
      * <read from a text file>
-     * @param filePath       file path to read from
-     * return data as a string
+     *
+     * @param filePath file path to read from
+     *                 return data as a string
      **/
     public static String readFromFile(String filePath) {
         String data;
@@ -52,8 +54,9 @@ public class FileUtils extends Base {
 
     /**
      * <read from file>
-     * @param filePath       file path to read from
-     * return the file input as FileInputStream
+     *
+     * @param filePath file path to read from
+     *                 return the file input as FileInputStream
      **/
     public static FileInputStream readFile(String filePath) {
         File file = new File(filePath);
@@ -68,9 +71,10 @@ public class FileUtils extends Base {
 
     /**
      * <read from properties file>
-     * @param filePath       file path to read from
-     * @param param          the value that you want to red
-     * return the data as string
+     *
+     * @param filePath file path to read from
+     * @param param    the value that you want to red
+     *                 return the data as string
      **/
     public static String readPropertiesFile(String filePath, String param) {
         FileInputStream file = readFile(filePath);
@@ -86,8 +90,9 @@ public class FileUtils extends Base {
 
     /**
      * <upload file from your home directory>
-     * @param button            file upload button
-     * @param filePath          the file that you want to download
+     *
+     * @param button   file upload button
+     * @param filePath the file that you want to download
      **/
     public static void uploadLocalFile(By button, String filePath) {
         ActionHelper.clickAction(button);
@@ -115,8 +120,9 @@ public class FileUtils extends Base {
 
     /**
      * <check that the file is downloaded successfully>
-     * @param File            file that you want to check
-     * return boolean true or false
+     *
+     * @param File file that you want to check
+     *             return boolean true or false
      **/
     public static boolean isFileDownloaded(String File) {
         String filepath = FilesPath.homeDir + "\\Downloads";
@@ -154,7 +160,7 @@ public class FileUtils extends Base {
      * <encode file to base 64 binary>
      * return string value
      ***/
-    public static String encodeFileToBase64Binary()  {
+    public static String encodeFileToBase64Binary() {
         File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         FileInputStream fileInputStreamReader = null;
         try {

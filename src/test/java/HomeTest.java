@@ -11,13 +11,17 @@ public class HomeTest extends Base {
         setUp();
     }
     HomePage homePage = new HomePage();
-    @Test(description = "Check that the default language is english")
+    @Test(description = "Check that the default language is english",priority = 1)
     public void checkTheDefaultLangIsEN() {
         homePage.checkTheDefaultLangIsEN();
     }
 
-    @Test(description = "Check the title for arabic website")
+    @Test(description = "Check the title for arabic website",priority = 2)
     public void checkTheTitleForAR() {
         homePage.checkTheTitleForAR();
+    }
+    @Test(description = "Check that the default language is english",priority = 3)
+    public void checkTheDefaultLangIsEN2() {
+        homePage.checkTheDefaultLangIsEN();
     }
 }
