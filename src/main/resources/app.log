@@ -1,9 +1,33 @@
-2025-01-22 10:00:55 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
-2025-01-22 10:00:56 -- INFO - [0;34mget the current URL: https://global.almosafer.com/en[0m
-2025-01-22 10:14:31 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
-2025-01-22 10:14:31 -- INFO - [0;34mget the current URL: https://global.almosafer.com/en[0m
-2025-01-22 10:14:37 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
-2025-01-22 10:14:39 -- INFO - [0;34mThe user click on [By.xpath: //a[@class='sc-gkFcWv jJNggu']][0m
-2025-01-22 10:14:39 -- INFO - [0;34mget the page title: المسافر: رحلات، فنادق، أنشطة ممتعة و تذاكر طيران[0m
-2025-01-22 10:14:46 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
-2025-01-22 10:14:46 -- INFO - [0;34mget the current URL: https://global.almosafer.com/en[0m
+2025-01-28 12:54:20 -- INFO - [0;34mfaarha mango [0m
+2025-01-28 12:54:20 -- ERROR- [0;31mFRAHA MANGO[0m
+2025-01-28 12:54:20 -- DEBUG- [0;31mFRAHA MANGO[0m
+2025-01-28 12:54:20 -- WARN - [0;33mFRAHA MANGO[0m
+2025-01-28 12:56:37 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
+2025-01-28 12:56:37 -- INFO - [0;34mget the current URL: https://global.almosafer.com/en[0m
+2025-01-28 12:58:25 -- INFO - [0;34mfaarha mango [0m
+2025-01-28 12:58:25 -- ERROR- [0;31mFRAHA MANGO[0m
+2025-01-28 12:58:25 -- DEBUG- [0;31mFRAHA MANGO[0m
+2025-01-28 12:58:25 -- WARN - [0;33mFRAHA MANGO[0m
+2025-01-28 13:58:59 -- INFO - [0;34mINFO MSG[0m
+2025-01-28 13:58:59 -- ERROR- [0;31mERROR MSG[0m
+2025-01-28 13:58:59 -- DEBUG- [0;31mDEBUG MSG[0m
+2025-01-28 13:58:59 -- WARN - [0;33mWARNING MSG[0m
+2025-01-28 13:59:02 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
+2025-01-28 13:59:02 -- INFO - [0;34mget the current URL: https://global.almosafer.com/en[0m
+2025-01-28 13:59:07 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
+2025-01-28 13:59:27 -- INFO - [0;34mINFO MSG[0m
+2025-01-28 13:59:27 -- ERROR- [0;31mERROR MSG[0m
+2025-01-28 13:59:27 -- DEBUG- [0;31mDEBUG MSG[0m
+2025-01-28 13:59:27 -- WARN - [0;33mWARNING MSG[0m
+2025-01-28 14:00:38 -- INFO - [0;34mINFO MSG[0m
+2025-01-28 14:00:38 -- ERROR- [0;31mERROR MSG[0m
+2025-01-28 14:00:38 -- DEBUG- [0;31mDEBUG MSG[0m
+2025-01-28 14:00:38 -- WARN - [0;33mWARNING MSG[0m
+2025-01-28 14:01:51 -- INFO - [0;34mINFO MSG[0m
+2025-01-28 14:01:51 -- ERROR- [0;31mERROR MSG[0m
+2025-01-28 14:01:51 -- DEBUG- [0;31mDEBUG MSG[0m
+2025-01-28 14:01:51 -- WARN - [0;33mWARNING MSG[0m
+2025-01-28 14:03:34 -- INFO - [0;34mINFO MSG[0m
+2025-01-28 14:03:34 -- ERROR- [0;31mERROR MSG[0m
+2025-01-28 14:03:34 -- DEBUG- [0;31mDEBUG MSG[0m
+2025-01-28 14:03:34 -- WARN - [0;33mWARNING MSG[0m

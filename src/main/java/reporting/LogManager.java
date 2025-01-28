@@ -17,7 +17,6 @@ import utils.FileUtils;
 
 public class LogManager implements ITestListener {
     static Logger logger = Logger.getLogger(LogManager.class.getName());
-
     private static ExtentReports extent = ExtentManager.createInstance();
 
     public static ThreadLocal<ExtentTest> testReport = new ThreadLocal<>();
@@ -26,7 +25,6 @@ public class LogManager implements ITestListener {
     public static  void INFO(String message) {
         logger.info(ConsoleColors.BLUE + message + ConsoleColors.RESET);
         testReport.get().log(Status.INFO,message,MediaEntityBuilder.createScreenCaptureFromBase64String(FileUtils.encodeFileToBase64Binary()).build());
-
     }
     public static  void ERROR(String message) {
         logger.error(ConsoleColors.RED + message + ConsoleColors.RESET);
