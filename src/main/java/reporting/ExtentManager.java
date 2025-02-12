@@ -14,7 +14,7 @@ public class ExtentManager {
     private static ExtentReports extent;
 
     public static ExtentReports createInstance() {
-        String dateFormatter = DateUtils.dateFormatter(DateUtils.getTheCurrentDate(), "DD-MMM-YYYY");
+        String dateFormatter = DateUtils.dateFormatter(DateUtils.getTheCurrentDate(), "dd-MMM-YYYY");
         String timeFormatter = DateUtils.timeFormatter(DateUtils.getTheCurrentTime(), "hh-mm-ss-a");
         ExtentSparkReporter htmlReporter = new ExtentSparkReporter(FilesPath.reportsFilePath + "ExtentReport-" + dateFormatter + " at " + timeFormatter + ".html");
 

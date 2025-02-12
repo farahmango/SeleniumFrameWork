@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.testng.asserts.SoftAssert;
 
 public class HomePage extends Base {
-    private By arabicButton = By.xpath("//a[@class='sc-gkFcWv jJNggu']");
+    private By arabicButton = By.xpath("//a[@class='sc-imABML jBAuIA']");
     private By continueOnENButton = By.xpath("//button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']");
 
     SoftAssert myAssert = new SoftAssert();
@@ -28,7 +28,6 @@ public class HomePage extends Base {
         String title = ActionHelper.getTheTitleOfThePage();
         ExplicitWait.waitForPageThatHasGivenTitle(title);
         System.out.println(title.equalsIgnoreCase("المسافر: رحلات، فنادق، أنشطة ممتعة و تذاكر طيرا"));
-
         myAssert.assertTrue(title.equalsIgnoreCase("المسافر: رحلات، فنادق، أنشطة ممتعة و تذاكر طيرا"));
         myAssert.assertAll();
     }

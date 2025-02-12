@@ -161,6 +161,7 @@ public class FileUtils extends Base {
      * return string value
      ***/
     public static String encodeFileToBase64Binary() {
+
         File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         FileInputStream fileInputStreamReader = null;
         try {
