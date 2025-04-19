@@ -24,6 +24,7 @@ public class Home extends Base {
     @Test(description = "Check that the default language is english",priority = 3)
     public void checkTheDefaultLangIsEN2() {
         homePage.checkTheDefaultLangIsEN();
+        System.out.println("test");
     }
     @Test
     public void TestSLF4J() {
