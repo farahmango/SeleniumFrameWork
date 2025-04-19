@@ -19,7 +19,7 @@ public class LogManager implements ITestListener {
 
     public static ThreadLocal<ExtentTest> testReport = new ThreadLocal<>();
 
-    public static String customHtml() {
+    public static String customHtmlForScreenShot() {
         String anchorTag = "<a href='data:image/png;base64," + FileUtils.encodeFileToBase64Binary() + "'" + " data-featherlight='image' >";
         String customHtml = "<td>" +
                 anchorTag +
@@ -29,12 +29,12 @@ public class LogManager implements ITestListener {
 
     public static void INFO(String message) {
         logger.info(ConsoleColors.BLUE + message + ConsoleColors.RESET);
-        testReport.get().log(Status.INFO, message + customHtml());
+        testReport.get().log(Status.INFO, message + customHtmlForScreenShot());
     }
 
     public static void ERROR(String message) {
         logger.error(ConsoleColors.RED + message + ConsoleColors.RESET);
-        testReport.get().log(Status.FAIL, message + customHtml());
+        testReport.get().log(Status.FAIL, message + customHtmlForScreenShot());
     }
 
     @Override
