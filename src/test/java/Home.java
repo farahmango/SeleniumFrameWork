@@ -1,3 +1,4 @@
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -7,7 +8,7 @@ import reporting.SLF4J;
 
 @Listeners(reporting.LogManager.class)
 public class Home extends Base {
-    @BeforeMethod
+    @BeforeClass
     public void setUpDriver() {
         setUp();
     }

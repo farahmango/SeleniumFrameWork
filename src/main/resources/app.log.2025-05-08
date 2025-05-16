@@ -1,0 +1,6 @@
+2025-05-08 09:33:14 -- INFO - [0;34mINFO MSG[0m
+2025-05-08 09:33:14 -- ERROR- [0;31mERROR MSG[0m
+2025-05-08 09:33:14 -- DEBUG- [0;31mDEBUG MSG[0m
+2025-05-08 09:33:14 -- WARN - [0;33mWARNING MSG[0m
+2025-05-08 09:33:14 -- INFO - [0;34mThe user click on [By.xpath: //button[@class='sc-jTzLTM hQpNle cta__button cta__continue btn btn-primary']][0m
+2025-05-08 09:33:15 -- INFO - [0;34mget the current URL: https://global.almosafer.com/en[0m

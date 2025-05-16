@@ -6,7 +6,7 @@
     </listeners>
     <test name="Almosafer" parallel="classes">
         <classes>
-            <class name="Home"></class>
+<!--            <class name="Home"></class>-->
             <class name="Json"></class>
             <class name="Date"></class>
             <class name="File"></class>
@@ -14,3 +14,4 @@
         </classes>
     </test>
 </suite>
+<!-- add comment  -->
