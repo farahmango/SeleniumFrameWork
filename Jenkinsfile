@@ -4,8 +4,8 @@ pipeline {
     //     pollSCM '* * * * *'
     // }
     tools { 
-      maven 'MAVEN_HOME' 
-      jdk 'JAVA_HOME' 
+      maven 'Apache_Maven' 
+      jdk 'JDK' 
      }
    stages {
         stage('Checkout') {
