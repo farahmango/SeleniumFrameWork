@@ -1,10 +1,18 @@
 pipeline {
     agent any
+    triggers{
+        pollSCM '* * * * *'
+    }
     stages {
-        stage('Example') {
+        stage('biuld') {
             steps {
-                echo 'Hello World'
+                echo 'building the code'
             }
         }
+    stage('test') {
+        steps {
+            echo 'testing the code'
+        }
+    }
     }
 }
