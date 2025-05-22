@@ -3,16 +3,36 @@ pipeline {
     triggers{
         pollSCM '* * * * *'
     }
-    stages {
-        stage('biuld') {
+   stages {
+        stage('Checkout') {
             steps {
-                mvn compile
+                echo 'Checking out the code...'
+                checkout scm
             }
         }
-    stage('test') {
-        steps {
-            mvn clean test
+
+        stage('Build') {
+            steps {
+                echo 'Building the project...'
+                sh 'mvn clean install'
+            }
         }
-    }
+
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+                sh 'mvn test'
+            }
+        }
+
+        stage('Deploy') {
+            when {
+                branch 'main'
+            }
+            steps {
+                echo 'Deploying the application...'
+                sh 'mvn deploy'
+            }
+        }
     }
 }
