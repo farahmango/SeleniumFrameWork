@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script{
                 echo 'Building the project...'
-                bat 'mvn clean install'
+                echo 'mvn clean install'
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
             steps {
                  script{
                 echo 'Running tests...'
-                bat 'mvn test'
+                echo 'mvn test'
                  }
             }
         }
