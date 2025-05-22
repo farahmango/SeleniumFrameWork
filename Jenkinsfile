@@ -1,8 +1,8 @@
 pipeline {
-    agent { label 'main' }
-    triggers{
-        pollSCM '* * * * *'
-    }
+    agent any
+    // triggers{
+    //     pollSCM '* * * * *'
+    // }
    stages {
         stage('Checkout') {
             steps {
