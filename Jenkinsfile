@@ -13,15 +13,19 @@ pipeline {
 
         stage('Build') {
             steps {
+                script{
                 echo 'Building the project...'
                 bat 'mvn clean install'
+                }
             }
         }
 
         stage('Test') {
             steps {
+                 script{
                 echo 'Running tests...'
                 bat 'mvn test'
+                 }
             }
         }
 
@@ -30,8 +34,10 @@ pipeline {
                 branch 'main'
             }
             steps {
+                 script{
                 echo 'Deploying the application...'
                 bat 'mvn deploy'
+                 }
             }
         }
     }
