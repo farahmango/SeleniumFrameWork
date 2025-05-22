@@ -6,12 +6,12 @@ pipeline {
     stages {
         stage('biuld') {
             steps {
-                echo 'building the code'
+                mvn compile
             }
         }
     stage('test') {
         steps {
-            echo 'testing the code'
+            mvn clean test
         }
     }
     }
