@@ -4,7 +4,8 @@ pipeline {
     //     pollSCM '* * * * *'
     // }
     tools {
-        maven 'Apache_Maven'
+        // maven 'Apache_Maven'
+        def maven = tool name: 'Apache_Maven', type: 'maven'
         jdk 'JDK'
     }
    stages {
