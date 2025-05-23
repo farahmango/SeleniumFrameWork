@@ -6,7 +6,6 @@ pipeline {
     // }
     tools {
         maven 'Apache_Maven'
-        jdk 'JDK'
     }
    stages {
         stage('Checkout') {
