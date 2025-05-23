@@ -4,7 +4,7 @@ pipeline {
     //     pollSCM '* * * * *'
     // }
     environment {
-    mavenHome = tool 'Apache_Maven'
+    Apache_Maven = tool 'Apache_Maven'
     }
     tools { 
       jdk 'JDK' 
