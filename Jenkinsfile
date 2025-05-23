@@ -4,8 +4,8 @@ pipeline {
     //     pollSCM '* * * * *'
     // }
     tools {
-        maven 'Maven 3.9.3'
-        jdk 'jdk22'
+        maven 'Apache_Maven'
+        jdk 'JDK'
     }
    stages {
         stage('Checkout') {
