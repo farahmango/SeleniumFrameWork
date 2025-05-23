@@ -3,8 +3,10 @@ pipeline {
     // triggers{
     //     pollSCM '* * * * *'
     // }
+    environment {
+    mavenHome = tool 'Apache_Maven'
+    }
     tools { 
-      maven 'Apache_Maven' 
       jdk 'JDK' 
      }
    stages {
