@@ -3,12 +3,10 @@ pipeline {
     // triggers{
     //     pollSCM '* * * * *'
     // }
-    environment {
-    Apache_Maven = tool 'Apache_Maven'
+    tools {
+        maven 'Maven 3.9.3'
+        jdk 'jdk22'
     }
-    tools { 
-      jdk 'JDK' 
-     }
    stages {
         stage('Checkout') {
             steps {
