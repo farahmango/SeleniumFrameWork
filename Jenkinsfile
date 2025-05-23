@@ -25,7 +25,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running tests...'
-                bat 'mvn test'
+                sh 'mvn test'
                  
             }
         }
@@ -36,7 +36,7 @@ pipeline {
             }
             steps {
                 echo 'Deploying the application...'
-                bat 'mvn deploy'
+                sh 'mvn deploy'
             }
         }
     }
