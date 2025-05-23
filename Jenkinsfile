@@ -1,12 +1,11 @@
 pipeline {
-    def maven = tool name: 'Apache_Maven', type: 'maven'
 
     agent any
     // triggers{
     //     pollSCM '* * * * *'
     // }
     tools {
-        // maven 'Apache_Maven'
+        maven 'Apache_Maven'
         jdk 'JDK'
     }
    stages {
@@ -20,8 +19,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the project...'
-                // sh 'mvn clean install'
-                sh '${maven}/mvn clean install'
+                sh 'mvn clean install'
             }
         }
 
