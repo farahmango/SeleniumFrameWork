@@ -19,7 +19,7 @@ pipeline {
             steps {
                 echo 'Building the project...'
                 // sh 'mvn clean install'
-                sh '${maven}/bin/mvn clean install'
+                sh '${maven}/mvn clean install'
             }
         }
 
