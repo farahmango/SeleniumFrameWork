@@ -1,11 +1,12 @@
 pipeline {
+    def maven = tool name: 'Apache_Maven', type: 'maven'
+
     agent any
     // triggers{
     //     pollSCM '* * * * *'
     // }
     tools {
         // maven 'Apache_Maven'
-        def maven = tool name: 'Apache_Maven', type: 'maven'
         jdk 'JDK'
     }
    stages {
