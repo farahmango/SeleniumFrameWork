@@ -5,7 +5,7 @@ pipeline {
         pollSCM '* * * * *'
     }
     tools {
-        Maven 'Apache_Maven'
+        maven 'Apche_Maven'
     }
    stages {
         stage('Checkout') {
