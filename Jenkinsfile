@@ -4,9 +4,9 @@ pipeline {
     triggers{
         pollSCM '* * * * *'
     }
-    // tools {
-    //     maven 'Apache_Maven'
-    // }
+    tools {
+        maven 'Apache_Maven'
+    }
    stages {
         stage('Checkout') {
             steps {
