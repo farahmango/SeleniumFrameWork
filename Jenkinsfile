@@ -1,12 +1,12 @@
 pipeline {
-//
+
     agent any
-    // triggers{
-    //     pollSCM '* * * * *'
-    // }
-    tools {
-        maven 'Apache_Maven'
+    triggers{
+        pollSCM '* * * * *'
     }
+    // tools {
+    //     maven 'Apache_Maven'
+    // }
    stages {
         stage('Checkout') {
             steps {
