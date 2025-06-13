@@ -1,6 +1,5 @@
 
-# SeleniumFramework-
-
+# SeleniumFramework
 Structured environment designed to create and execute automated test scripts using the Selenium WebDriver. The framework is built with reusable components, best practices, and tools that help standardize and streamline the testing process for web applications, and below the application's structure.
 <br>
 <br>
