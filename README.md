@@ -11,26 +11,6 @@ Structured environment designed to create and execute automated test scripts usi
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Core Components</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-        }
-        h1 {
-            color: #333;
-        }
-        ul {
-            margin-left: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        .nested {
-            margin-left: 20px;
-        }
-    </style>
 </head>
 <body>
     <h1>Core Components</h1>
