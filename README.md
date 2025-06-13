@@ -3,8 +3,8 @@
 
 Structured environment designed to create and execute automated test scripts using the Selenium WebDriver. The framework is built with reusable components, best practices, and tools that help standardize and streamline the testing process for web applications, and below the application's structure.
 
-<img src="file:///C:/Users/FarahMango/Downloads/Diagram.drawio%20(1).png" alt=""/>
 
+![Diagram.drawio (1).png](..%2F..%2FDownloads%2FDiagram.drawio%20%281%29.png)
 
 <!DOCTYPE html>
 <html lang="en">
@@ -70,6 +70,12 @@ Structured environment designed to create and execute automated test scripts usi
             <strong>Configuration Management:</strong>
             <ul>
                 <li>Use <code>config.properties</code> or similar files to manage environment-specific settings like URLs, browser types, and credentials.</li>
+            </ul>
+        </li>
+      <li>
+            <strong>CI/CD Integration:</strong>
+            <ul>
+                <li>Seamlessly integrate with Jenkins.</li>
             </ul>
         </li>
     </ol>
