@@ -138,4 +138,15 @@ public class ActionHelper extends Base {
         logManager.INFO("Make a red border on this element " + webElement);
 
     }
+    public static void switchToWindow(String windowHandle) {
+        String window = driver.getWindowHandle();
+        driver.switchTo().window(windowHandle);
+    }
+    public static void switchToFrame(int indexOfFrame) {
+        driver.switchTo().frame(indexOfFrame);
+    }
+    public static void switchToFrame(String nameOrId) {
+        driver.switchTo().frame(nameOrId);
+    }
+
 }

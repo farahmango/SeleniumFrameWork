@@ -48,7 +48,6 @@ public class Base {
                 chromeOptions.addArguments("--disable-extensions");
                 chromeOptions.addArguments("--disable-web-security");
                 chromeOptions.setExperimentalOption("excludeSwitches", Arrays.asList("enable-automation"));
-                chromeOptions.addArguments("--incognito");
                 chromeOptions.addArguments("--allow-running-insecure-content");
                 chromeOptions.addArguments("--ignore-ssl-errors=yes");
                 chromeOptions.addArguments("--ignore-certificate-errors");
